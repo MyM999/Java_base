@@ -1,0 +1,20 @@
+학습 내용
+
+1. jdk1.5 이상 부터 추가된 문법 학습
+	- 현 기술문서에서 제시한 소스에도 적용
+	
+2. 미션 문제 제시
+	- mysql의 database가 아닌 자바코드 상에서의 데이터로 기초 통계 및 집계등의 연습
+	
+3. 주요 API의 내부 구조 뜯어보기
+	java.util.stream.ReferencePipeline$2@12f40c25
+	java.util.stream.ReferencePipeline$4@6842775d
+	
+	java.util.stream.ReferencePipeline 클래스는 API상에 이미 제공
+	단, stream api로 개별 메소드 호출시마다 자동으로 생성되는 객체들이 존재
+	inner class들 다수 존재
+		이름이 없는 클래스들 존재
+		컴파일시에 어떻게 byte code 생성
+			이름이 없기 때문에 $1 $2 등의 숫자를 자동적용
+			ReferencePipeline$2 의미는 ReferencePipeline 클래스에는 익명 inner 두번째 클래스 의미 
+	
